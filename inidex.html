@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Oussama Ben Hmida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p>Étudiant en Technologie de l'Informatique - Systèmes Embarqués & Mobiles</p>
+            <nav>
+                <ul>
+                    <li><a href="#terminal">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li> <!-- Ajout de la section Compétences -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="profil-cv">
+        <div class="profil-container">
+            <img src="468666622_1766728397434143_7151302633904081995_n.jpg" alt="Oussama BENHMIDA" class="profil-img">
+            <h3>Oussama BENHMIDA</h3>
+        </div>
+        <div class="cv-container">
+            <a href="cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+        </div>
+    </section>
+    
+    
+
+    <!-- Terminal Section -->
+    <main id="container">
+        <div id="terminal"    >
+          <!-- Terminal Bar -->       
+          <section id="terminal__bar">          
+            <div id="bar__buttons">            
+              <button class="bar__button" id="bar__button--exit">&#10005;</button>            
+              <button class="bar__button">&#9472;</button>                
+              <button class="bar__button">&#9723;</button>          
+            </div>          
+            <p id="bar__user">Oussema@Benhmida: ~</p>        
+          </section>        
+          <!-- Terminal Body -->        
+          <section id="terminal__body">
+            <div id="terminal__prompt">
+                <span id="terminal__prompt--user">Oussema@Benhmida:</span>
+                <span id="terminal__prompt--location">~</span>
+                <span id="terminal__prompt--bling">$</span>
+                <span id="terminal__prompt--cursor"></span>
+            </div>
+            <div id="terminal__output">
+                <span class="line">Je suis un étudiant passionné par les systèmes embarqués et les technologies informatiques.</span>
+                <span class="line">J'ai acquis une expérience pratique dans la programmation C/C++ embarqué, ainsi que dans le développement de projets IoT.</span>
+                <span class="line">J'aime travailler sur des projets innovants et résoudre des problèmes techniques complexes.</span>
+            </div>
+        </section>
+        
+  
+    
+  
+      <script>
+        // JavaScript to insert the content into the terminal
+        document.addEventListener("DOMContentLoaded", function() {
+          // Récupérer le contenu de la section "About"
+          const aboutContent = document.querySelector('#about p').textContent;
+  
+          // Créer une nouvelle ligne dans le terminal pour afficher ce contenu
+          const terminalOutput = document.getElementById('terminal__output');
+          const newLine = document.createElement('p');
+          newLine.textContent = aboutContent;
+  
+          // Afficher le texte dans le terminal
+          terminalOutput.appendChild(newLine);
+        });
+      </script>
+
+<section id="projets">
+    <h2>Mes Projets</h2>
+    <div class="projets-container">
+        <div class="projet-card">
+            <img src="1732476988-VNYIDx5jL7aROJlbES8grdzW.webp" alt="Projet 1" class="projet-img">
+            <div class="projet-content">
+                <h3>Projet 1 : Développement d'un Driver GPIO pour STM32</h3>
+                <p>Création d'un driver GPIO pour configurer et gérer les broches GPIO d'un microcontrôleur STM32 en C embarqué.</p>
+                <a href="https://github.com/Oussem12/STM32F-GPIO-Driver" class="github-btn" target="_blank">GitHub</a>
+            </div>
+        </div>
+        
+        <div class="projet-card">
+            <img src="R2.png" alt="Projet 2" class="projet-img">
+            <div class="projet-content">
+                <h3>Projet 2 : IoT sur Raspberry Pi</h3>
+                <p>Utilisation du capteur AHT10 pour collecter des données environnementales et les envoyer à un broker MQTT via Python.</p>
+                <a href="https://github.com/Oussem12/Projet-IoT-sur-Raspberry-PI" class="github-btn" target="_blank">GitHub</a>
+            </div>
+        </div>
+        
+        <div class="projet-card">
+            <img src="R.jpeg" alt="Projet 3" class="projet-img">
+            <div class="projet-content">
+                <h3>Projet 3 : IoT sur STM32</h3>
+                <p>Collecte de données de température avec un capteur DHT11 et envoi des données à ThingSpeak via un module ESP8266.</p>
+                <a href="https://github.com/Oussem12/Projet-IoT-sur-STM32" class="github-btn" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="competences">
+        <h2>Compétences Techniques</h2>
+    
+        <div class="competence-category">
+            <h3>Langages de Programmation</h3>
+            <ul>
+                <li><strong>C/C++</strong> : Programmation orientée objet, gestion de la mémoire.</li>
+                <li><strong>C embarqué</strong> : Développement pour microcontrôleurs, gestion des entrées/sorties.</li>
+                <li><strong>VHDL</strong> : Conception de circuits logiques pour FPGA, modélisation et simulation.</li>
+                <li><strong>Assembleur</strong> : Programmation bas niveau, optimisation sur microcontrôleurs.</li>
+                <li><strong>Java</strong> : Développement d'applications mobiles et systèmes, Kotlin pour Android.</li>
+            </ul>
+        </div>
+    
+        <div class="competence-category">
+            <h3>Cartes et Microcontrôleurs</h3>
+            <ul>
+                <li><strong>Raspberry Pi</strong> : Projets IoT, gestion des capteurs sous Linux embarqué.</li>
+                <li><strong>STM32</strong> : Programmation en C pour microcontrôleurs STM32, développement de drivers.</li>
+                <li><strong>PIC</strong> : Projets avec les microcontrôleurs PIC, gestion des périphériques.</li>
+                <li><strong>FPGA</strong> : Conception avec FPGA, programmation en VHDL.</li>
+            </ul>
+        </div>
+    
+        <div class="competence-category">
+            <h3>Logiciels de Développement</h3>
+            <ul>
+                <li><strong>STM32CubeIDE</strong> : Développement sur microcontrôleurs STM32.</li>
+                <li><strong>IAR Embedded Workbench</strong> : Environnement de développement pour systèmes embarqués.</li>
+                <li><strong>Proteus</strong> : Simulation de circuits électroniques et conception de schémas.</li>
+                <li><strong>Vivado</strong> : Outil pour la conception et simulation des FPGA.</li>
+            </ul>
+        </div>
+    
+        <div class="competence-category">
+            <h3>Protocoles de Communication</h3>
+            <ul>
+                <li><strong>UART</strong> : Communication série entre microcontrôleurs et périphériques.</li>
+                <li><strong>CAN</strong> : Protocole pour systèmes industriels et automobiles.</li>
+                <li><strong>I2C</strong> : Communication multi-esclaves entre microcontrôleurs et capteurs.</li>
+                <li><strong>SPI</strong> : Communication haute vitesse pour des projets embarqués.</li>
+                <li><strong>MQTT</strong> : Protocole léger pour l'Internet des Objets (IoT).</li>
+            </ul>
+        </div>
+    
+        <div class="competence-category">
+            <h3>Systèmes d'exploitation</h3>
+            <ul>
+                <li><strong>Linux</strong> : Gestion des ressources matérielles et logiciels dans des projets IoT.</li>
+                <li><strong>Windows</strong> : Utilisation dans le développement logiciel.</li>
+            </ul>
+        </div>
+    </section>
+    
+      
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+    <section id="liens">
+        <h2>Mes Réseaux Sociaux</h2>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/oussama-ben-hmida-395076304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link linkedin">
+            <img src="OIP.jpeg" alt="LinkedIn" />
+            LinkedIn
+          </a>
+          <a href="https://github.com/Oussem12" target="_blank" class="social-link github">
+            <img src="github-logo-black-transparent-free-png.webp" alt="GitHub" />
+            GitHub
+          </a>
+        </div>
+      </section>
+      
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Oussama Ben Hmida. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
